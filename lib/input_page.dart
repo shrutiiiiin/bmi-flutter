@@ -31,8 +31,14 @@ class _InputPageState extends State<InputPage> {
             ],
           ),
           Expanded(
-            child: ReusableCard(
-              color: Color(0xFF1D1E33),
+            child: Container(
+              height: 200,
+              width: 350,
+              margin: EdgeInsets.all(15),
+              decoration: BoxDecoration(
+                color: Color(0xFF1D1E33),
+                borderRadius: BorderRadius.circular(10),
+              ),
             ),
           ),
           Row(
