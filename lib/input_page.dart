@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 const bottomheightcontainer = 80;
+const bottomContainerColor = Color(0xFFEB1555);
 
 class InputPage extends StatefulWidget {
   const InputPage({super.key});
@@ -61,7 +62,7 @@ class _InputPageState extends State<InputPage> {
             width: double.infinity,
             height: bottomheightcontainer,
             margin: EdgeInsets.only(top: 15),
-            color: Color(0xFF1D1E33),
+            color: bottomContainerColor,
           ),
         ],
       ),
