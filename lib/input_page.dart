@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 const bottomheightcontainer = 70.0;
 const bottomContainerColor = Color(0xFFEB1555);
@@ -25,6 +26,11 @@ class _InputPageState extends State<InputPage> {
               Expanded(
                 child: ReusableCard(
                   color: primaryColor,
+                  cardchild: Column(
+                    children: [
+                      Icon(FontAwesomeIcons.mars),
+                    ],
+                  ),
                 ),
               ),
               Expanded(
@@ -72,11 +78,13 @@ class _InputPageState extends State<InputPage> {
 }
 
 class ReusableCard extends StatelessWidget {
-  ReusableCard({required this.color});
+  ReusableCard({required this.color, this.cardchild});
   final Color color;
+  final Widget? cardchild; //make it null
   @override
   Widget build(BuildContext context) {
     return Container(
+      child: cardchild,
       height: 200,
       width: 180,
       margin: EdgeInsets.all(15),
