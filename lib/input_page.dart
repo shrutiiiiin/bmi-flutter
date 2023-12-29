@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-const bottomheightcontainer = 80.0;
+const bottomheightcontainer = 70.0;
 const bottomContainerColor = Color(0xFFEB1555);
 const primaryColor = Color(0xFF1D1E33);
 
