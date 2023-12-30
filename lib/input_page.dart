@@ -16,6 +16,26 @@ class InputPage extends StatefulWidget {
 }
 
 class _InputPageState extends State<InputPage> {
+  Color malecardColor = inactiveColor;
+  Color femalecardColor = inactiveColor;
+  void updateColor(int gender) {
+    if (gender == 1) {
+      if (malecardColor == inactiveColor) {
+        malecardColor = primaryColor;
+        femalecardColor = inactiveColor;
+      } else {
+        malecardColor = inactiveColor;
+      }
+    } else {
+      if (femalecardColor == inactiveColor) {
+        femalecardColor = primaryColor;
+        malecardColor = inactiveColor;
+      } else {
+        femalecardColor = inactiveColor;
+      }
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -28,9 +48,13 @@ class _InputPageState extends State<InputPage> {
             children: [
               Expanded(
                 child: GestureDetector(
-                  onTap: () {},
+                  onTap: () {
+                    setState(() {
+                      updateColor(1);
+                    });
+                  },
                   child: ReusableCard(
-                    color: inactiveColor,
+                    color: malecardColor,
                     cardchild: IconContent(
                         icontext: 'MALE', icon: FontAwesomeIcons.mars),
                   ),
@@ -38,11 +62,18 @@ class _InputPageState extends State<InputPage> {
               ),
               Expanded(
                 child: GestureDetector(
-                  child: ReusableCard(
-                    color: inactiveColor,
-                    cardchild: IconContent(
-                      icontext: 'FEMALE',
-                      icon: FontAwesomeIcons.venus,
+                  child: GestureDetector(
+                    onTap: () {
+                      setState(() {
+                        updateColor(0);
+                      });
+                    },
+                    child: ReusableCard(
+                      color: femalecardColor,
+                      cardchild: IconContent(
+                        icontext: 'FEMALE',
+                        icon: FontAwesomeIcons.venus,
+                      ),
                     ),
                   ),
                 ),
