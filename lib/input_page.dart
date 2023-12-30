@@ -26,19 +26,19 @@ class _InputPageState extends State<InputPage> {
 
   void updateColor(Gender gender) {
     if (gender == Gender.male) {
-      if (malecardColor == inactiveColor) {
-        malecardColor = primaryColor;
-        femalecardColor = inactiveColor;
-      } else {
-        malecardColor = inactiveColor;
-      }
-    } else {
-      if (femalecardColor == inactiveColor) {
-        femalecardColor = primaryColor;
-        malecardColor = inactiveColor;
-      } else {
-        femalecardColor = inactiveColor;
-      }
+      //   if (malecardColor == inactiveColor) {
+      //     malecardColor = primaryColor;
+      //     femalecardColor = inactiveColor;
+      //   } else {
+      //     malecardColor = inactiveColor;
+      //   }
+      // } else {
+      //   if (femalecardColor == inactiveColor) {
+      //     femalecardColor = primaryColor;
+      //     malecardColor = inactiveColor;
+      //   } else {
+      //     femalecardColor = inactiveColor;
+      //   }
     }
   }
 
