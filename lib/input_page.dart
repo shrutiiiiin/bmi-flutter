@@ -26,11 +26,7 @@ class _InputPageState extends State<InputPage> {
               Expanded(
                 child: ReusableCard(
                   color: primaryColor,
-                  cardchild: Column(
-                    children: [
-                      Icon(FontAwesomeIcons.mars),
-                    ],
-                  ),
+                  cardchild: IconContent(),
                 ),
               ),
               Expanded(
@@ -73,6 +69,33 @@ class _InputPageState extends State<InputPage> {
           ),
         ],
       ),
+    );
+  }
+}
+
+class IconContent extends StatelessWidget {
+  IconContent({required this.icontext, required this.icon});
+  final Text icontext;
+  final Icon icon;
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        Icon(
+          FontAwesomeIcons.mars,
+          size: 80,
+        ),
+        SizedBox(
+          height: 15,
+        ),
+        Text(
+          icontext as String,
+          style: TextStyle(
+            fontSize: 18,
+            color: Color(0xFF8D8E98),
+          ),
+        ),
+      ],
     );
   }
 }
