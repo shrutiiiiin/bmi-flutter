@@ -21,7 +21,7 @@ class InputPage extends StatefulWidget {
 }
 
 class _InputPageState extends State<InputPage> {
-  late Gender selectedGender;
+  Gender? selectedGender;
   // Color malecardColor = inactiveColor;
   // Color femalecardColor = inactiveColor;
 
