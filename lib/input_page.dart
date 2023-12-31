@@ -99,13 +99,12 @@ class _InputPageState extends State<InputPage> {
                       activeTrackColor: Colors.white,
                       thumbColor: Color(0xFFEB1555),
                       thumbShape: RoundSliderThumbShape(enabledThumbRadius: 15),
-                      overlayShape: RoundSliderOverlayShape(overlayRadius: 16),
+                      overlayShape: RoundSliderOverlayShape(overlayRadius: 30),
                     ),
                     child: Slider(
                       value: height.toDouble(),
                       min: 120,
                       max: 220,
-                      activeColor: Color(0xFFEB1555),
                       inactiveColor: Color(0xFF8D8E98),
                       onChanged: (double newvalue) {
                         setState(() {
