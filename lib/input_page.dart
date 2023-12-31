@@ -38,8 +38,8 @@ class _InputPageState extends State<InputPage> {
                   },
                   child: ReusableCard(
                     color: selectedGender == Gender.male
-                        ? primaryColor
-                        : inactiveColor,
+                        ? kprimaryColor
+                        : kinactiveColor,
                     cardchild: IconContent(
                         icontext: 'MALE', icon: FontAwesomeIcons.mars),
                   ),
@@ -55,8 +55,8 @@ class _InputPageState extends State<InputPage> {
                     },
                     child: ReusableCard(
                       color: selectedGender == Gender.female
-                          ? primaryColor
-                          : inactiveColor,
+                          ? kprimaryColor
+                          : kinactiveColor,
                       cardchild: IconContent(
                         icontext: 'FEMALE',
                         icon: FontAwesomeIcons.venus,
@@ -69,11 +69,14 @@ class _InputPageState extends State<InputPage> {
           ),
           Expanded(
             child: Container(
+              child: Row(
+                children: [Text()],
+              ),
               height: 200,
               width: 350,
               margin: EdgeInsets.all(15),
               decoration: BoxDecoration(
-                color: primaryColor,
+                color: kprimaryColor,
                 borderRadius: BorderRadius.circular(10),
               ),
             ),
@@ -82,21 +85,21 @@ class _InputPageState extends State<InputPage> {
             children: [
               Expanded(
                 child: ReusableCard(
-                  color: primaryColor,
+                  color: kprimaryColor,
                 ),
               ),
               Expanded(
                 child: ReusableCard(
-                  color: primaryColor,
+                  color: kprimaryColor,
                 ),
               ),
             ],
           ),
           Container(
             width: double.infinity,
-            height: bottomheightcontainer,
+            height: kBottomheightcontainer,
             margin: EdgeInsets.only(top: 15),
-            color: bottomContainerColor,
+            color: kBottomContainerColor,
           ),
         ],
       ),
