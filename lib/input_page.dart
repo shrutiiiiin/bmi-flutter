@@ -70,7 +70,7 @@ class _InputPageState extends State<InputPage> {
             ],
           ),
           Expanded(
-            child: ReusableCard(
+            child: sliderContainer(
               color: kprimaryColor,
               cardchild: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -98,7 +98,9 @@ class _InputPageState extends State<InputPage> {
                       value: height.toDouble(),
                       min: 120,
                       max: 220,
-                      onChanged: onChanged)
+                      onChanged: (double newvalue) {
+                        print(newvalue);
+                      }),
                 ],
               ),
             ),
