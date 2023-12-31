@@ -94,7 +94,9 @@ class _InputPageState extends State<InputPage> {
                       )
                     ],
                   ),
-                  Slider(
+                  SliderTheme(
+                    data: SliderThemeData(),
+                    child: Slider(
                       value: height.toDouble(),
                       min: 120,
                       max: 220,
@@ -104,7 +106,10 @@ class _InputPageState extends State<InputPage> {
                         setState(() {
                           height = newvalue.toInt();
                         });
-                      }),
+                      },
+                      label: '$height',
+                    ),
+                  ),
                 ],
               ),
             ),
