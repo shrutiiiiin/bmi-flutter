@@ -121,6 +121,7 @@ class _InputPageState extends State<InputPage> {
             ),
           ),
           Row(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Expanded(
                 child: ReusableCard(
@@ -133,6 +134,24 @@ class _InputPageState extends State<InputPage> {
                       Text(
                         weight.toString(),
                         style: kNumberTextStyle,
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          // FloatingActionButton(onPressed: setState(() {
+                          ElevatedButton( onPressed: ,
+                            child: Icon(
+                              Icons.add,
+                              color: Colors.white,
+
+                            ),
+                          ),
+                          Icon(
+                            Icons.remove,
+                            color: Colors.white,
+                          ),
+                          // });,
+                        ],
                       )
                     ],
                   ),
