@@ -121,12 +121,12 @@ class _InputPageState extends State<InputPage> {
             ),
           ),
           Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Expanded(
                 child: ReusableCard(
                   cardchild: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       Text(
                         'WEIGHT',
