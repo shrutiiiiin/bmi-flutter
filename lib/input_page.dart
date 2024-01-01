@@ -136,15 +136,12 @@ class _InputPageState extends State<InputPage> {
                         style: kNumberTextStyle,
                       ),
                       Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
                           // FloatingActionButton(onPressed: setState(() {
-                          ElevatedButton( onPressed: ,
-                            child: Icon(
-                              Icons.add,
-                              color: Colors.white,
-
-                            ),
+                          Icon(
+                            Icons.add,
+                            color: Colors.white,
                           ),
                           Icon(
                             Icons.remove,
