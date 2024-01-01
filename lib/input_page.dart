@@ -123,6 +123,14 @@ class _InputPageState extends State<InputPage> {
             children: [
               Expanded(
                 child: ReusableCard(
+                  cardchild: Column(
+                    children: [
+                      Text(
+                        'WEIGHT',
+                        style: kLabelTextStyle,
+                      ),
+                    ],
+                  ),
                   color: kprimaryColor,
                 ),
               ),
