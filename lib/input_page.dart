@@ -39,7 +39,7 @@ class _InputPageState extends State<InputPage> {
                       selectedGender = Gender.male;
                     });
                   },
-                  child: ReusableCard(
+                  child: GenderCard(
                     color: selectedGender == Gender.male
                         ? kprimaryColor
                         : kinactiveColor,
@@ -56,7 +56,7 @@ class _InputPageState extends State<InputPage> {
                         selectedGender = Gender.female;
                       });
                     },
-                    child: ReusableCard(
+                    child: GenderCard(
                       color: selectedGender == Gender.female
                           ? kprimaryColor
                           : kinactiveColor,
@@ -137,14 +137,16 @@ class _InputPageState extends State<InputPage> {
                         style: kNumberTextStyle,
                       ),
                       Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        mainAxisSize: MainAxisSize.min,
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           RoundIconButton(),
-                          Icon(
-                            Icons.remove,
-                            color: Colors.white,
-                            size: 30,
-                          ),
+                          RoundIconButton(),
+                          // Icon(
+                          //   Icons.remove,
+                          //   color: Colors.white,
+                          //   size: 30,
+                          // ),
                           // });,
                         ],
                       )
@@ -166,7 +168,6 @@ class _InputPageState extends State<InputPage> {
             margin: EdgeInsets.only(top: 15),
             color: kBottomContainerColor,
           ),
-          FloatingActionButton(onPressed: onPressed),
         ],
       ),
     );
@@ -177,7 +178,6 @@ class RoundIconButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return RawMaterialButton(
-      constraints: BoxConstraints(),
       onPressed: () {},
       shape: CircleBorder(),
       fillColor: Color(0xFF4C4F5E),

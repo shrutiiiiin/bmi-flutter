@@ -8,7 +8,26 @@ class ReusableCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       child: cardchild,
-      height: 110,
+      height: 150,
+      width: 210,
+      margin: EdgeInsets.all(15),
+      decoration: BoxDecoration(
+        color: color,
+        borderRadius: BorderRadius.circular(10),
+      ),
+    );
+  }
+}
+
+class GenderCard extends StatelessWidget {
+  GenderCard({this.color, this.cardchild});
+  final Color? color;
+  final Widget? cardchild; //make it null
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      child: cardchild,
+      height: 100,
       width: 200,
       margin: EdgeInsets.all(15),
       decoration: BoxDecoration(
@@ -27,7 +46,7 @@ class sliderContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       child: cardchild,
-      height: 200,
+      height: 110,
       width: 400,
       margin: EdgeInsets.all(15),
       decoration: BoxDecoration(
