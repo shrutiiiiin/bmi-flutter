@@ -139,7 +139,6 @@ class _InputPageState extends State<InputPage> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
-                          // FloatingActionButton(onPressed: setState(() {
                           RoundIconButton(),
                           Icon(
                             Icons.remove,
@@ -167,6 +166,7 @@ class _InputPageState extends State<InputPage> {
             margin: EdgeInsets.only(top: 15),
             color: kBottomContainerColor,
           ),
+          FloatingActionButton(onPressed: onPressed),
         ],
       ),
     );
@@ -177,6 +177,7 @@ class RoundIconButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return RawMaterialButton(
+      constraints: BoxConstraints(),
       onPressed: () {},
       shape: CircleBorder(),
       fillColor: Color(0xFF4C4F5E),
