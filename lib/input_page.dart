@@ -122,6 +122,7 @@ class _InputPageState extends State<InputPage> {
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Expanded(
                 child: ReusableCard(
@@ -142,10 +143,12 @@ class _InputPageState extends State<InputPage> {
                           Icon(
                             Icons.add,
                             color: Colors.white,
+                            size: 30,
                           ),
                           Icon(
                             Icons.remove,
                             color: Colors.white,
+                            size: 30,
                           ),
                           // });,
                         ],

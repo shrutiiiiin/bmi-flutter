@@ -12,7 +12,7 @@ class IconContent extends StatelessWidget {
       children: [
         Icon(
           icon,
-          size: 70,
+          size: 55,
         ),
         SizedBox(
           height: 10,
