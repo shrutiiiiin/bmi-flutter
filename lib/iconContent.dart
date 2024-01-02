@@ -9,13 +9,14 @@ class IconContent extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
+      crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         Icon(
           icon,
-          size: 50,
+          size: 40,
         ),
         SizedBox(
-          height: 20,
+          height: 10,
         ),
         Text(
           icontext,

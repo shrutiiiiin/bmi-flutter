@@ -45,7 +45,6 @@ class _InputPageState extends State<InputPage> {
                         : kinactiveColor,
                     cardchild: IconContent(
                         icontext: 'MALE', icon: FontAwesomeIcons.mars),
-                    onPress: () {},
                   ),
                 ),
               ),
@@ -65,7 +64,6 @@ class _InputPageState extends State<InputPage> {
                         icontext: 'FEMALE',
                         icon: FontAwesomeIcons.venus,
                       ),
-                      onPress: () {},
                     ),
                   ),
                 ),
@@ -143,16 +141,20 @@ class _InputPageState extends State<InputPage> {
                           // mainAxisSize: MainAxisSize.min,
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            RoundIconButton(),
+                            Icon(
+                              Icons.add,
+                              color: Colors.white,
+                              size: 30,
+                            ),
                             SizedBox(
                               width: 10,
                             ),
-                            RoundIconButton(),
-                            // Icon(
-                            //   Icons.remove,
-                            //   color: Colors.white,
-                            //   size: 30,
-                            // ),
+
+                            Icon(
+                              Icons.remove,
+                              color: Colors.white,
+                              size: 30,
+                            ),
                             // });,
                           ],
                         )
@@ -176,18 +178,22 @@ class _InputPageState extends State<InputPage> {
                         ),
                         Row(
                           // mainAxisSize: MainAxisSize.min,
-                          mainAxisAlignment: MainAxisAlignment.center,
+                          // mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            RoundIconButton(),
+                            Icon(
+                              Icons.add,
+                              color: Colors.white,
+                              size: 30,
+                            ),
                             SizedBox(
                               width: 10,
                             ),
-                            RoundIconButton(),
-                            // Icon(
-                            //   Icons.remove,
-                            //   color: Colors.white,
-                            //   size: 30,
-                            // ),
+                            // RoundIconButton(),
+                            Icon(
+                              Icons.remove,
+                              color: Colors.white,
+                              size: 30,
+                            ),
                             // });,
                           ],
                         )

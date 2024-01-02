@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
 class ReusableCard extends StatelessWidget {
-  ReusableCard({this.color, this.cardchild, required this.onPress});
+  ReusableCard({this.color, this.cardchild, this.onPress});
   final Color? color;
-  final Widget? cardchild; //make it null
-  VoidCallback onPress;
+  final Widget? cardchild;
+  VoidCallback? onPress; //make it null
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -22,21 +22,18 @@ class ReusableCard extends StatelessWidget {
 }
 
 class GenderCard extends StatelessWidget {
-  GenderCard({this.color, this.cardchild, required this.onPress});
+  GenderCard({this.color, this.cardchild});
   final Color? color;
   final Widget? cardchild; //make it null
-  VoidCallback onPress;
+
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: onPress,
-      child: Container(
-        child: cardchild,
-        margin: EdgeInsets.all(15),
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(10),
-          color: color,
-        ),
+    return Container(
+      child: cardchild,
+      margin: EdgeInsets.all(15),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(10),
+        color: color,
       ),
     );
   }
