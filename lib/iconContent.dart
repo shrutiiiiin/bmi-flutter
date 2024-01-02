@@ -1,3 +1,5 @@
+import 'dart:ffi';
+
 import 'package:flutter/material.dart';
 import 'constants.dart';
 
@@ -30,7 +32,7 @@ class IconContent extends StatelessWidget {
 class Iconsmall extends StatelessWidget {
   Iconsmall({required this.varicon, required this.onPressed, this.onPress});
   final IconData varicon;
-  final Function onPressed;
+  final VoidCallback onPressed;
   VoidCallback? onPress;
   @override
   Widget build(BuildContext context) {
@@ -45,7 +47,7 @@ class Iconsmall extends StatelessWidget {
             icon: Icon(varicon),
             color: Colors.white,
             onPressed: () {
-              onPressed;
+              onPressed();
             },
           ),
         ),

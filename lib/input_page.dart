@@ -51,20 +51,18 @@ class _InputPageState extends State<InputPage> {
               ),
               Expanded(
                 child: GestureDetector(
-                  child: GestureDetector(
-                    onTap: () {
-                      setState(() {
-                        selectedGender = Gender.female;
-                      });
-                    },
-                    child: ReusableCard(
-                      color: selectedGender == Gender.female
-                          ? kprimaryColor
-                          : kinactiveColor,
-                      cardchild: IconContent(
-                        icontext: 'FEMALE',
-                        icon: FontAwesomeIcons.venus,
-                      ),
+                  onTap: () {
+                    setState(() {
+                      selectedGender = Gender.female;
+                    });
+                  },
+                  child: ReusableCard(
+                    color: selectedGender == Gender.female
+                        ? kprimaryColor
+                        : kinactiveColor,
+                    cardchild: IconContent(
+                      icontext: 'FEMALE',
+                      icon: FontAwesomeIcons.venus,
                     ),
                   ),
                 ),
@@ -73,7 +71,6 @@ class _InputPageState extends State<InputPage> {
           ),
           Expanded(
             child: ReusableCard(
-              color: kprimaryColor,
               cardchild: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -114,11 +111,11 @@ class _InputPageState extends State<InputPage> {
                           height = newvalue.toInt();
                         });
                       },
-                      label: '$height',
                     ),
                   ),
                 ],
               ),
+              color: kprimaryColor,
             ),
           ),
           Expanded(
@@ -152,7 +149,6 @@ class _InputPageState extends State<InputPage> {
                             SizedBox(
                               width: 10,
                             ),
-
                             Iconsmall(
                               varicon: FontAwesomeIcons.minus,
                               onPressed: () {
@@ -189,6 +185,7 @@ class _InputPageState extends State<InputPage> {
                             Iconsmall(
                               varicon: FontAwesomeIcons.plus,
                               onPressed: () {
+                                print('inc age');
                                 setState(() {
                                   age++;
                                 });
@@ -201,6 +198,7 @@ class _InputPageState extends State<InputPage> {
                             Iconsmall(
                               varicon: FontAwesomeIcons.minus,
                               onPressed: () {
+                                print('dec age');
                                 setState(() {
                                   age--;
                                 });
