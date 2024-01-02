@@ -39,7 +39,7 @@ class _InputPageState extends State<InputPage> {
                       selectedGender = Gender.male;
                     });
                   },
-                  child: GenderCard(
+                  child: ReusableCard(
                     color: selectedGender == Gender.male
                         ? kprimaryColor
                         : kinactiveColor,
@@ -56,7 +56,7 @@ class _InputPageState extends State<InputPage> {
                         selectedGender = Gender.female;
                       });
                     },
-                    child: GenderCard(
+                    child: ReusableCard(
                       color: selectedGender == Gender.female
                           ? kprimaryColor
                           : kinactiveColor,
@@ -169,7 +169,7 @@ class _InputPageState extends State<InputPage> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Text(
-                          'WEIGHT',
+                          'AGE',
                           style: kLabelTextStyle,
                         ),
                         Text(
@@ -177,8 +177,8 @@ class _InputPageState extends State<InputPage> {
                           style: kNumberTextStyle,
                         ),
                         Row(
-                          // mainAxisSize: MainAxisSize.min,
-                          // mainAxisAlignment: MainAxisAlignment.center,
+                          mainAxisSize: MainAxisSize.min,
+                          mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Icon(
                               Icons.add,
@@ -219,10 +219,14 @@ class _InputPageState extends State<InputPage> {
 }
 
 class RoundIconButton extends StatelessWidget {
+  RounndIconButton({this.icon});
+  final Icon? icon;
+
   @override
   Widget build(BuildContext context) {
     return RawMaterialButton(
       onPressed: () {},
+      child: Icon(icon),
       shape: CircleBorder(),
       fillColor: Color(0xFF4C4F5E),
     );
