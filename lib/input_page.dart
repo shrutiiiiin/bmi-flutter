@@ -144,6 +144,11 @@ class _InputPageState extends State<InputPage> {
                           children: [
                             Iconsmall(
                               varicon: Icons.add,
+                              onPressed: () {
+                                setState(() {
+                                  weight++;
+                                });
+                              },
                             ),
                             SizedBox(
                               width: 10,
@@ -151,6 +156,11 @@ class _InputPageState extends State<InputPage> {
 
                             Iconsmall(
                               varicon: Icons.remove,
+                              onPressed: () {
+                                setState(() {
+                                  weight--;
+                                });
+                              },
                             ),
                             // });,
                           ],

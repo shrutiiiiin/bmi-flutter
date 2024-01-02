@@ -28,19 +28,26 @@ class IconContent extends StatelessWidget {
 }
 
 class Iconsmall extends StatelessWidget {
-  Iconsmall({required this.varicon});
+  Iconsmall({required this.varicon, required this.onPressed, this.onPress});
   final IconData varicon;
+  final Function onPressed;
+  VoidCallback? onPress;
   @override
   Widget build(BuildContext context) {
     return Column(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       //crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        IconButton(
-          iconSize: 30,
-          icon: Icon(varicon),
-          color: Colors.white,
-          onPressed: () {},
+        GestureDetector(
+          onTap: onPress,
+          child: IconButton(
+            iconSize: 30,
+            icon: Icon(varicon),
+            color: Colors.white,
+            onPressed: () {
+              onPressed;
+            },
+          ),
         ),
       ],
     );
