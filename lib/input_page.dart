@@ -45,6 +45,7 @@ class _InputPageState extends State<InputPage> {
                         : kinactiveColor,
                     cardchild: IconContent(
                         icontext: 'MALE', icon: FontAwesomeIcons.mars),
+                    onPress: () {},
                   ),
                 ),
               ),
@@ -64,6 +65,7 @@ class _InputPageState extends State<InputPage> {
                         icontext: 'FEMALE',
                         icon: FontAwesomeIcons.venus,
                       ),
+                      onPress: () {},
                     ),
                   ),
                 ),
@@ -118,54 +120,90 @@ class _InputPageState extends State<InputPage> {
                   ),
                 ],
               ),
+              onPress: () {},
             ),
           ),
-          Row(
-            children: [
-              Expanded(
-                child: ReusableCard(
-                  cardchild: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      Text(
-                        'WEIGHT',
-                        style: kLabelTextStyle,
-                      ),
-                      Text(
-                        weight.toString(),
-                        style: kNumberTextStyle,
-                      ),
-                      Row(
-                        mainAxisSize: MainAxisSize.min,
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          RoundIconButton(),
-                          RoundIconButton(),
-                          // Icon(
-                          //   Icons.remove,
-                          //   color: Colors.white,
-                          //   size: 30,
-                          // ),
-                          // });,
-                        ],
-                      )
-                    ],
+          Expanded(
+            child: Row(
+              children: [
+                Expanded(
+                  child: ReusableCard(
+                    cardchild: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          'WEIGHT',
+                          style: kLabelTextStyle,
+                        ),
+                        Text(
+                          weight.toString(),
+                          style: kNumberTextStyle,
+                        ),
+                        Row(
+                          // mainAxisSize: MainAxisSize.min,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            RoundIconButton(),
+                            SizedBox(
+                              width: 10,
+                            ),
+                            RoundIconButton(),
+                            // Icon(
+                            //   Icons.remove,
+                            //   color: Colors.white,
+                            //   size: 30,
+                            // ),
+                            // });,
+                          ],
+                        )
+                      ],
+                    ),
+                    onPress: () {},
                   ),
-                  color: kprimaryColor,
                 ),
-              ),
-              Expanded(
-                child: ReusableCard(
-                  color: kprimaryColor,
+                Expanded(
+                  child: ReusableCard(
+                    cardchild: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          'WEIGHT',
+                          style: kLabelTextStyle,
+                        ),
+                        Text(
+                          weight.toString(),
+                          style: kNumberTextStyle,
+                        ),
+                        Row(
+                          // mainAxisSize: MainAxisSize.min,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            RoundIconButton(),
+                            SizedBox(
+                              width: 10,
+                            ),
+                            RoundIconButton(),
+                            // Icon(
+                            //   Icons.remove,
+                            //   color: Colors.white,
+                            //   size: 30,
+                            // ),
+                            // });,
+                          ],
+                        )
+                      ],
+                    ),
+                    color: kprimaryColor,
+                    onPress: () {},
+                  ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
           Container(
             width: double.infinity,
             height: kBottomheightcontainer,
-            margin: EdgeInsets.only(top: 15),
+            margin: EdgeInsets.only(top: 5),
             color: kBottomContainerColor,
           ),
         ],
