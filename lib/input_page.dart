@@ -219,14 +219,18 @@ class _InputPageState extends State<InputPage> {
 }
 
 class RoundIconButton extends StatelessWidget {
-  RounndIconButton({this.icon});
-  final Icon? icon;
+  RounndIconButton({this.icon}) {
+    // TODO: implement RounndIconButton
+    throw UnimplementedError();
+  }
+
+  late final Icon? icon;
 
   @override
   Widget build(BuildContext context) {
     return RawMaterialButton(
       onPressed: () {},
-      child: Icon(icon),
+      child: Icon(icon as IconData?),
       shape: CircleBorder(),
       fillColor: Color(0xFF4C4F5E),
     );
