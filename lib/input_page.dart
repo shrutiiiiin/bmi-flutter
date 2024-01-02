@@ -119,7 +119,6 @@ class _InputPageState extends State<InputPage> {
                   ),
                 ],
               ),
-              onPress: () {},
             ),
           ),
           Expanded(
@@ -143,7 +142,7 @@ class _InputPageState extends State<InputPage> {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Iconsmall(
-                              varicon: Icons.add,
+                              varicon: FontAwesomeIcons.plus,
                               onPressed: () {
                                 setState(() {
                                   weight++;
@@ -155,7 +154,7 @@ class _InputPageState extends State<InputPage> {
                             ),
 
                             Iconsmall(
-                              varicon: Icons.remove,
+                              varicon: FontAwesomeIcons.minus,
                               onPressed: () {
                                 setState(() {
                                   weight--;
@@ -167,7 +166,7 @@ class _InputPageState extends State<InputPage> {
                         )
                       ],
                     ),
-                    onPress: () {},
+                    color: kprimaryColor,
                   ),
                 ),
                 Expanded(
@@ -187,19 +186,25 @@ class _InputPageState extends State<InputPage> {
                           mainAxisSize: MainAxisSize.min,
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Icon(
-                              Icons.add,
-                              color: Colors.white,
-                              size: 30,
+                            Iconsmall(
+                              varicon: FontAwesomeIcons.plus,
+                              onPressed: () {
+                                setState(() {
+                                  age++;
+                                });
+                              },
                             ),
                             SizedBox(
                               width: 10,
                             ),
-                            // RoundIconButton(),
-                            Icon(
-                              Icons.remove,
-                              color: Colors.white,
-                              size: 30,
+
+                            Iconsmall(
+                              varicon: FontAwesomeIcons.minus,
+                              onPressed: () {
+                                setState(() {
+                                  age--;
+                                });
+                              },
                             ),
                             // });,
                           ],
@@ -207,7 +212,6 @@ class _InputPageState extends State<InputPage> {
                       ],
                     ),
                     color: kprimaryColor,
-                    onPress: () {},
                   ),
                 ),
               ],
