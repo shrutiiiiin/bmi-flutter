@@ -72,7 +72,7 @@ class _InputPageState extends State<InputPage> {
             ],
           ),
           Expanded(
-            child: sliderContainer(
+            child: ReusableCard(
               color: kprimaryColor,
               cardchild: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -143,14 +143,14 @@ class _InputPageState extends State<InputPage> {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Iconsmall(
-                              icon: Icons.add,
+                              varicon: Icons.add,
                             ),
                             SizedBox(
                               width: 10,
                             ),
 
                             Iconsmall(
-                              icon: Icons.remove,
+                              varicon: Icons.remove,
                             ),
                             // });,
                           ],
