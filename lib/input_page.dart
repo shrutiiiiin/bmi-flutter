@@ -20,6 +20,7 @@ class _InputPageState extends State<InputPage> {
   Gender? selectedGender;
   int height = 180;
   int weight = 60;
+  int age = 19;
 
   @override
   Widget build(BuildContext context) {
@@ -141,19 +142,15 @@ class _InputPageState extends State<InputPage> {
                           // mainAxisSize: MainAxisSize.min,
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Icon(
-                              Icons.add,
-                              color: Colors.white,
-                              size: 30,
+                            Iconsmall(
+                              icon: Icons.add,
                             ),
                             SizedBox(
                               width: 10,
                             ),
 
-                            Icon(
-                              Icons.remove,
-                              color: Colors.white,
-                              size: 30,
+                            Iconsmall(
+                              icon: Icons.remove,
                             ),
                             // });,
                           ],
@@ -173,7 +170,7 @@ class _InputPageState extends State<InputPage> {
                           style: kLabelTextStyle,
                         ),
                         Text(
-                          weight.toString(),
+                          age.toString(),
                           style: kNumberTextStyle,
                         ),
                         Row(
@@ -214,25 +211,6 @@ class _InputPageState extends State<InputPage> {
           ),
         ],
       ),
-    );
-  }
-}
-
-class RoundIconButton extends StatelessWidget {
-  RounndIconButton({this.icon}) {
-    // TODO: implement RounndIconButton
-    throw UnimplementedError();
-  }
-
-  late final Icon? icon;
-
-  @override
-  Widget build(BuildContext context) {
-    return RawMaterialButton(
-      onPressed: () {},
-      child: Icon(icon as IconData?),
-      shape: CircleBorder(),
-      fillColor: Color(0xFF4C4F5E),
     );
   }
 }
