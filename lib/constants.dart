@@ -23,3 +23,8 @@ const kResultTextStyle = TextStyle(
   color: Color(0xFF24D876),
   fontWeight: FontWeight.bold,
 );
+const kBodyTextStyle = TextStyle(
+  fontSize: 20,
+  color: Colors.white,
+  fontWeight: FontWeight.w300,
+);

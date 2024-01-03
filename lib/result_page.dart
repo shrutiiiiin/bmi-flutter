@@ -39,6 +39,7 @@ class ResultPage extends StatelessWidget {
                   ),
                   Text(
                     'you are overweight, BLAH NLAH',
+                    style: kBodyTextStyle,
                     textAlign: TextAlign.center,
                   ),
                 ],
