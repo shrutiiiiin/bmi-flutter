@@ -230,7 +230,7 @@ class _InputPageState extends State<InputPage> {
               child: Center(
                 child: Text(
                   'CALCULATE',
-                  style: kLabelTextStyle,
+                  style: kLargeTextStyle,
                 ),
               ),
               width: double.infinity,
