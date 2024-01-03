@@ -1,6 +1,7 @@
 import 'package:bmi_flutter/result_page.dart';
 import 'package:bmi_flutter/reusable_card.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'iconContent.dart';
 import 'constants.dart';
@@ -221,12 +222,14 @@ class _InputPageState extends State<InputPage> {
           BottomButton(
             buttonTitle: 'CAlCULATE',
             onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => ResultPage(),
-                ),
-              );
+              SchedulerBinding.instance.addPostFrameCallback((timeStamp) {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => ResultPage(),
+                  ),
+                );
+              });
             },
           ),
         ],
