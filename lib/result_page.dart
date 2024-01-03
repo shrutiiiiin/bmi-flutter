@@ -1,9 +1,11 @@
 import 'package:bmi_flutter/constants.dart';
 import 'package:bmi_flutter/reusable_card.dart';
 import 'package:flutter/material.dart';
+import 'input_page.dart';
 
 class ResultPage extends StatelessWidget {
   @override
+  int weight = 60;
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
@@ -13,15 +15,27 @@ class ResultPage extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
           Expanded(
-            child: Container(
-              child: Text('Your Result'),
-            ),
+            child: Text('Your Result'),
           ),
           Expanded(
             flex: 5,
             child: ReusableCard(
               color: kprimaryColor,
-              cardchild: Column(),
+              cardchild: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Text(
+                    'OVERWEIGHT',
+                    style: kResultTextStyle,
+                  ),
+                  Text(
+                    weight.toString(),
+                    style: kNumberTextStyle,
+                  ),
+                  Text('you are overweight, BLAH NLAH'),
+                ],
+              ),
             ),
           ),
         ],

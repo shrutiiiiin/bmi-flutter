@@ -18,3 +18,8 @@ const kLargeTextStyle = TextStyle(
   fontSize: 30,
   color: Colors.white,
 );
+const kResultTextStyle = TextStyle(
+  fontSize: 22,
+  color: Color(0xFF24D876),
+  fontWeight: FontWeight.bold,
+);
