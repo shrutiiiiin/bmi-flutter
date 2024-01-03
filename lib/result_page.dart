@@ -37,7 +37,10 @@ class ResultPage extends StatelessWidget {
                     weight.toString(),
                     style: kNumberTextStyle,
                   ),
-                  Text('you are overweight, BLAH NLAH'),
+                  Text(
+                    'you are overweight, BLAH NLAH',
+                    textAlign: TextAlign.center,
+                  ),
                 ],
               ),
             ),
