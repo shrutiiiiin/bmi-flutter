@@ -17,9 +17,13 @@ class ResultPage extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           Expanded(
-            child: Text(
-              'Your Result',
-              style: kLargeTextStyle,
+            child: Container(
+              padding: EdgeInsets.all(15),
+              alignment: Alignment.bottomLeft,
+              child: Text(
+                'Your Result',
+                style: kLargeTextStyle,
+              ),
             ),
           ),
           Expanded(
@@ -47,15 +51,21 @@ class ResultPage extends StatelessWidget {
               ),
             ),
           ),
+          // BottomButton(
+          //   buttonTitle: 'CAlCULATE',
+          //   onTap: () {
+          //     Navigator.push(
+          //       context,
+          //       MaterialPageRoute(builder: (context) => InputPage()),
+          //     );
+          //   },
+          // ),
           BottomButton(
-            buttonTitle: 'CAlCULATE',
+            buttonTitle: 'RE-CALUCLATE',
             onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => InputPage()),
-              );
+              Navigator.pop(context);
             },
-          ),
+          )
         ],
       ),
     );
