@@ -2,14 +2,15 @@ import 'package:flutter/material.dart';
 import 'constants.dart';
 
 class BottomButton extends StatelessWidget {
-  BottomButton({required this.buttonTitle, required this.onTap});
+  BottomButton({required this.buttonTitle, this.onTap});
 
-  final Function onTap;
+  // final VoidCallbackAction omn;
+  VoidCallback? onTap;
   final String buttonTitle;
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: onTap(),
+      onTap: onTap,
       child: Container(
         child: Center(
           child: Text(
