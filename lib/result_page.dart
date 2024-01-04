@@ -1,10 +1,18 @@
 import 'package:bmi_flutter/constants.dart';
 import 'package:bmi_flutter/reusable_card.dart';
 import 'package:flutter/material.dart';
-import 'input_page.dart';
 import 'bottom_button_page.dart';
+import 'calculator_bmi.dart';
 
 class ResultPage extends StatelessWidget {
+  ResultPage(
+      {required this.bmiResult,
+      required this.resultText,
+      required this.resultInterpretation});
+  final String bmiResult;
+  final String resultText;
+  final String resultInterpretation;
+
   @override
   int weight = 60;
   Widget build(BuildContext context) {
@@ -35,15 +43,15 @@ class ResultPage extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Text(
-                    'OVERWEIGHT',
+                    resultText,
                     style: kResultTextStyle,
                   ),
                   Text(
-                    weight.toString(),
+                    bmiResult,
                     style: kNumberTextStyle,
                   ),
                   Text(
-                    'you are overweight, BLAH NLAH',
+                    resultInterpretation,
                     style: kBodyTextStyle,
                     textAlign: TextAlign.center,
                   ),

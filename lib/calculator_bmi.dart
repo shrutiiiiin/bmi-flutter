@@ -1,7 +1,7 @@
 import 'dart:math';
 
 class CalculateBMI {
-  CalculateBMI({required this.height, required this.weight});
+  CalculateBMI({required this.height, required this.weight}) : _bmi = 0.0;
   final int height;
   final int weight;
 
